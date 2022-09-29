@@ -1,0 +1,48 @@
+.navbar{
+    height: 75px;
+    width: 100%;
+    background-color: rgb(43, 41, 41);
+}
+.logo{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 35px;
+}
+.showAlert{
+    width: 100%;
+}
+.form_textarea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.logo span{
+    color: crimson;
+}
+
+.gimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.gimg img{
+     height: 400px;
+     width: 400px;
+     margin: 5px 5px;
+}
+
+.agreebtn{
+    display: flex;
+}
+
+@media(max-width: 450px){
+    .gimg img{
+        height: 300px;
+        width: 300px;
+        margin: 3px 3px;
+   }
+}
