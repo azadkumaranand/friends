@@ -59,44 +59,48 @@ const allquotes = [
     },
 ]
 
-allquotes.forEach((e)=>{
+const friends = ["Rajkumar", "Priyal", "Rashi", "Sadaf fatima", "Devansh", "Sarvesh", "Hariom", "Vibhor", "Shivraj", "Kunal", "Riya", "Radhika", "Khushi", "Diksha", "Raghav"]
+
+const friendIndex = Math.floor(Math.random() * friends.length)
+
+allquotes.forEach((e) => {
     imgpath.innerHTML += `<img src="${e.imgurl}">`
 })
 
-function constract(){
+
+function constract() {
     alert(`Thanks ${entername.value} ! for your opinion`)
 }
 
 function showFriend() {
-    
+
     if (entername.value == "Azad kumar" || entername.value == "Azad Kumar" || entername.value == "Azad" || entername.value == "azad" || entername.value == "azad kumar") {
-        showAlert.innerHTML =` <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>Hi ${entername.value} </strong> Your Best Friend is Ponung Mize
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>`
-        agreebtn.innerHTML = `
-            <button type="button" class="btn btn-primary my-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                You Agree?
-            </button>`
+        showAlert.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Hi ${entername.value} !</strong> Your Best Friend is ponung Mize
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div> `
+        agreebtn.innerHTML = `<button type="button" class="btn btn-success my-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        You Agree?
+      </button>`
     }
     else if (entername.value == "Ponung Mize" || entername.value == "ponung mize" || entername.value == "ponung") {
-        showAlert.innerHTML =` <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>Hi ${entername.value} </strong> Your Best Friend is Azad Kumar
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>`
+        showAlert.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Hi ${entername.value}! </strong> Your best friend is Azad Kumar
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>`
         agreebtn.innerHTML = `
-            <button type="button" class="btn btn-primary my-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                You Agree?
-            </button>`
+        <button type="button" class="btn btn-success my-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        You Agree?
+</button>`
     }
-    else{
-        showAlert.innerHTML =`<div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>Hi bro!</strong> You are the best friend of yourself
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>`
+    else {
+        showAlert.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Hi ${entername.value}!</strong> Your Best Friend is ${friends[friendIndex]}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div> `
         agreebtn.innerHTML = `
-            <button type="button" class="btn btn-primary my-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                You Agree?
-            </button>`
+        <button type="button" class="btn btn-success my-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  You Agree?
+</button>`
     }
 }
