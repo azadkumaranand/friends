@@ -59,10 +59,10 @@ const allquotes = [
     },
 ]
 
-const friends = ["Rajkumar", "Azad", "Priyal", "Rashi", "Sadaf fatima", "Devansh", "Sarvesh", "Hariom", "Vibhor", "Shivraj", "Kunal", "Riya", "Radhika", "Khushi", "Diksha", "Raghav"]
-setInterval(() => {
-    friendIndex = Math.floor(Math.random() * friends.length)
-}, 5000);
+const friends = ["Rajkumar", "Azad", "Priyal", "Rashi", "Sadaf fatima", "Devansh", "Sarvesh", "Hariom", "Vibhor", "Shivraj", "Kunal", "Riya","Jackline","Joni Sence","Miya Khlifa", "Radhika", "Khushi", "Diksha", "Raghav"]
+// setInterval(() => {
+//     friendIndex = Math.floor(Math.random() * friends.length)
+// }, 5000);
 
 allquotes.forEach((e) => {
     imgpath.innerHTML += `<img src="${e.imgurl}">`
@@ -75,7 +75,7 @@ function constract() {
 
 function showFriend() {
 
-    if (entername.value == "Azad kumar" || entername.value == "Azad Kumar" || entername.value == "Azad" || entername.value == "azad" || entername.value == "azad kumar") {
+    if (entername.value.toLowerCase() == "azad kumar" || entername.value.toLowerCase() == "azad") {
         showAlert.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
         <strong>Hi ${entername.value} !</strong> Your Best Friend is ponung Mize
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -84,7 +84,7 @@ function showFriend() {
         You Agree?
       </button>`
     }
-    else if (entername.value == "Ponung Mize" || entername.value == "ponung mize" || entername.value == "ponung" || entername.value == "Ponung") {
+    else if (entername.value.toLowerCase() == "ponung mize" || entername.value.toLowerCase() == "ponung") {
         showAlert.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
         <strong>Hi ${entername.value}! </strong> Your best friend is Azad Kumar
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -94,7 +94,15 @@ function showFriend() {
         You Agree?
 </button>`
     }
+    else if(entername.value==""){
+        showAlert.innerHTML = `<div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Sir! </strong>Enter Your Name Please
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>`
+      agreebtn.innerHTML = ``
+    }
     else {
+        const friendIndex = Math.floor(Math.random() * friends.length)
         showAlert.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
         <strong>Hi ${entername.value}!</strong> Your Best Friend is ${friends[friendIndex]}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
