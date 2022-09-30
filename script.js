@@ -4,7 +4,7 @@ const imgpath = document.querySelector('.gimg');
 const agreebtn = document.querySelector('.agreebtn');
 const allquotes = [
     {
-        imgurl: 'images/1.jpg'
+        imgurl: 'images/1.png'
     },
     {
         imgurl: 'images/2.jpg'
@@ -13,7 +13,7 @@ const allquotes = [
         imgurl: 'images/3.jpg'
     },
     {
-        imgurl: 'images/4.png'
+        imgurl: 'images/4.jpg'
     },
     {
         imgurl: 'images/5.jpg'
@@ -59,9 +59,10 @@ const allquotes = [
     },
 ]
 
-const friends = ["Rajkumar", "Priyal", "Rashi", "Sadaf fatima", "Devansh", "Sarvesh", "Hariom", "Vibhor", "Shivraj", "Kunal", "Riya", "Radhika", "Khushi", "Diksha", "Raghav"]
-
-const friendIndex = Math.floor(Math.random() * friends.length)
+const friends = ["Rajkumar", "Azad", "Priyal", "Rashi", "Sadaf fatima", "Devansh", "Sarvesh", "Hariom", "Vibhor", "Shivraj", "Kunal", "Riya", "Radhika", "Khushi", "Diksha", "Raghav"]
+setInterval(() => {
+    friendIndex = Math.floor(Math.random() * friends.length)
+}, 5000);
 
 allquotes.forEach((e) => {
     imgpath.innerHTML += `<img src="${e.imgurl}">`
