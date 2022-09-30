@@ -83,7 +83,7 @@ function showFriend() {
         You Agree?
       </button>`
     }
-    else if (entername.value == "Ponung Mize" || entername.value == "ponung mize" || entername.value == "ponung") {
+    else if (entername.value == "Ponung Mize" || entername.value == "ponung mize" || entername.value == "ponung" || entername.value == "Ponung") {
         showAlert.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
         <strong>Hi ${entername.value}! </strong> Your best friend is Azad Kumar
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
