@@ -98,9 +98,6 @@ function showFriend() {
         <strong>Hi ${entername.value}!</strong> Your Best Friend is ${friends[friendIndex]}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div> `
-        agreebtn.innerHTML = `
-        <button type="button" class="btn btn-success my-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  You Agree?
-</button>`
+        agreebtn.innerHTML = ``
     }
 }
