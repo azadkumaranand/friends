@@ -45,6 +45,18 @@
 .agreebtn{
     display: flex;
 }
+.texts p {
+    color: black;
+    text-align: left;
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  .texts p .replay {
+    text-align: right;
+  }
 
 @media(max-width: 450px){
     .gimg img{
